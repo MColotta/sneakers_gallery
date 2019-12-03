@@ -2,24 +2,35 @@
 	margin: 0;
 	padding:0;
 }
+
 body{
 	font-family: 'Quattrocento', serif;
 	font-size:13px;
 	font-weight:300;
 	background-color:#eee;
 }
+
+.nav {
+	display: flex;
+	align-items: center;
+	margin-top:15px;
+}
+
 header h1 {
 	font-family: 'Oswald', sans-serif;
 	font-size:36px;
 	text-align: center;
 	font-weight:400;
 	text-transform:uppercase;
-	margin-top:15px;	
+	flex-grow: 2;
+	/*margin-top:15px;*/
 }
+
 header hr, footer hr {
 	width:100%;
 	margin:15px auto 30px auto;
 }
+
 .gallery{
 	width:100%;
 	margin: 0 auto;
@@ -56,12 +67,21 @@ header hr, footer hr {
 	text-transform: uppercase;
 	color: #000;
 }
-.gallery li p{
+
+.precio{
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
 	color: #ce3b3b;
 }
+
+.envio {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
 .gallery li time{
 	display: block;
 	font-weight: 400;

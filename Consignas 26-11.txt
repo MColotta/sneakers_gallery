@@ -1,0 +1,25 @@
+1. Listar todas las zapatillas ordenadas desde el mayor al menor precio.
+2. Actualizar el precio de todas las zapatillas con un descuento del 2%
+3. Mostrar el nuevo precio de venta en una columna denominada precio online.
+4. Actualizar el precio de venta de la zapatilla de mayor precio en un 1%
+5. Agregar una nueva columna denominada free_shipping para enviar zapatillas en forma gratuita.
+
+1. SELECT * FROM sneakers ORDER BY price DESC;
+
+2. UPDATE sneakers SET price = price -(price*2/100);
+
+3. SELECT price AS "precio online" FROM sneakers;
+
+4. UPDATE sneakers SET price = price +(price*0.01) WHERE price = (Select MAX(price));
+
+5. ALTER TABLE sneakers add free_shipping BOOLEAN DEFAULT FALSE;
+
+
+
+
+
+UPDATE sneakers SET price = price +(price*1/100) WHERE price = MAX(price);
+
+ALTER TABLE sneakers MODIFY price SET price = price +(price*1/100) WHERE price = MAX(price);
+
+SELECT SUM(price +(price*0.01)) FROM sneakers WHERE price = (select MAX(price) FROM sneakers);
